@@ -38,7 +38,7 @@ Utilizamos o "Marvelapp" para desenhar os mockups do nosso site, que vocês pode
 
 
 ## Build Procedures
-
+Todos os arquivos necessários para a execução/visualização do projeto estão no .ZIP. Você deve descompactar a pasta no seu computador, e executar o arquivo "index.html" através de um browser(preferencialmente o Google Chrome).
 
 ## Problemas
 
