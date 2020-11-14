@@ -1,7 +1,6 @@
 # Grupo1_Des.Web2020
 Projeto de desenvolvimento Web
 - 8062877 - Caio Jorge de Menezes Abreu Silva		
-- 9805928 - Leonardo Henrique Martins Florentino		
 - 10748347 - Tarcídio Antônio Júnior		
 
 ## Requisitos
