@@ -51,3 +51,4 @@ As maiores dificuldades que tivemos durante a implementação, foi na construç�
 Tivemos que consultar bastante o GitHub e Youtube para encontrarmos referencias em CSS que poderíamos utilizar/adaptar para o nosso projeto.
 
 ## Comentários
+Durante o projeto, um dos integrantes do grupo trancou a disciplina, e isso acabou sobrecarregando o restante da equipe.
