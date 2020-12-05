@@ -3,52 +3,136 @@ Projeto de desenvolvimento Web
 - 8062877 - Caio Jorge de Menezes Abreu Silva		
 - 10748347 - Tarcídio Antônio Júnior		
 
-## Requisitos
-- O sistema deve ter 2 tipos de usuários: Clientes e Administradores 
-  - Os administradores são responsáveis por registrar/gerenciar administradores, clientes e produtos. O aplicativo já vem com uma conta de administrador com senha admin.
-- Clientes são usuários que acessam o sistema para comprar produtos.
-- O registro do administrador inclui, pelo menos: nome, id(gerado pelo sistema), telefone, e-mail.
-- O registro de cada cliente inclui, no mínimo: nome, id(gerado pelo sistema), endereço, telefone, e-mail
-- Os registros de produtos incluem: nome, id(gerado pelo sistema), foto, descrição, preço, quantidade (em estoque), quantidade vendida, Link para vídeo gameplay, categoria, data de lançamento.
-- Sobre a venda dos produtos: Os produtos são selecionados e incluídos em um carrinho. Os produtos são comprados usando um número de cartão de crédito (qualquer número é aceito pelo sistema). A quantidade de produto vendida é subtraída da quantidade em estoque e adicionada à quantidade vendida. Os carrinhos são esvaziados apenas mediante pagamento ou pelos clientes.
-- O Administrador pode gerar os seguintes relatórios no sistema:
-  - Vendas (Data_Pedido, Id_Pedido, Qtd, Valor )
-  - Produtos ( Id_Produto , Nome_Produto, Valor_Unidade, Estoque,  Unidades_Vendidas , Valor_Arrecadado )
-
-
-
 ## Descrição do Projeto
+
 Nesse projeto desenvolvemos uma loja de jogos para computador, chamada "Bee Games".<br>
 Na nossa loja os jogos estão organizados por categoria, além da página inicial, que mostra os jogos lançados mais recentemente.<br>
 A nossa funcionalidade extra, será a visualização de um vídeo de gameplay do jogo, que poderá ser acessado pelo usuário dentro da página de produto.<br>
 Utilizamos o "Marvelapp" para desenhar os mockups do nosso site, que vocês poderão acessar através do link a seguir:<br>
 [Mockups do Projeto](https://marvelapp.com/prototype/25i5e036/screen/73256281)
 
+## Testes
 
+### Plano de Teste
 
-
-
-
-## Comentários sobre o código
-
-
-
-## Plano de teste
 Não utilizamos nenhuma ferramenta atomatizada para realizar testes. Nossos testes foram manuais através da execução dos arquivos html utilizando o Google Chrome.
 
+### Resultados de teste
 
-## Resultados de teste
 Durante a implementação, testavamos as páginas a cada modificação feita nos arquivos .html, .css e .js, e isso foi fundamental para conseguirmos realizar essa entrega.
 Nos testes finais, o resultado foi satisfatório.
 
+## Dependências
 
-## Build Procedures
-Todos os arquivos necessários para a execução/visualização do projeto estão no .ZIP. Você deve descompactar a pasta no seu computador, e executar o arquivo "index.html" através de um browser(preferencialmente o Google Chrome).
-Para visualizar as telas de admin, entre na pasta "/admin" e execute qualquer um dos arquivos html através de um browser(preferencialmente o Google Chrome).
+- [NodeJS](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/) ou [NPM](https://www.npmjs.com/)
+- [MongoDB](https://www.mongodb.com/)
+
+## Instruções
+
+- **Passo 0:** Instalar todas as dependências
+
+- **Passo 1:** Clonar o repositório git
+
+`git clone https://github.com/CaioJMASilva/Grupo1_Des.Web2020.git`
+
+- **Passo 2:** Importar o dump do banco de dados
+
+`mongorestore --host <host:port> --username <username> --password <password> -d store --drop dump/store`
+
+- **Passo 3:** Na pasta /api/.env alterar a variável `DB_CONNECTION` com suas credenciais de conexão ao banco de dados 
+
+- **Passo 4:** Na pasta /api instalar os pacotes NodeJS
+
+`cd api/`
+
+`yarn install` ou `npm install`
+
+- **Passo 5:** Na pasta /api rodar o backend
+
+`yarn start` ou `npm start`
+
+- **Passo 6:** Na pasta /ui instalar os pacotes NodeJS
+
+`cd ui/`
+
+`yarn install` ou `npm install`
+
+- **Passo 7:** Na pasta /ui rodar o backend
+
+`yarn start` ou `npm start`
+
+- **Passo 8:** Na url `http://localhost:3000` estará o ecommerce rodando
+
+## Funcionalidades
+
+Para o usuário comum:
+
+- **Página inicial** com a lista de todos os produtos.
+- **Página de categoria** com a lista dos produtos de uma categoria específica.
+- **Página do produto** com informações do produto e a opção de adicionar no carrinho.
+- **Página do carrinho** com os produtos adicionados e a possibilidade de alterar a quantidade. Caso o usuário esteja logado é enviado para a página de endereço de entrega, caso contrário, para a página de login.
+- **Página de endereço de entrega** puxando a informação de endereço do usuário logado e permitindo alterar o endereço de entrega.
+- **Página de pagamento** para o usuário informar as informações do cartão e finalizar a transação. Caso tudo esteja correto, o usuário é enviado para a página de histórico de pedidos.
+- **Página de histórico** de pedido mostra todos os pedidos realizados pelo usuário logado
+- **Página de perfil** mostra as informações pessoais e endereço do usuário logado, permitindo alteração e mudança de senha.
+- **Página de login** para o usuário realizar o acesso.
+- **Página de cadastro** para a criação de um novo usuário.
+
+Para o usuário administrador:
+
+- **Página de login** para o usuário realizar o acesso.
+- **Gerenciamento de produtos** permitindo a listagem e edição de produtos, adição de novo e por fim pausa para não aparecer mais na loja.
+- **Gerenciamento de categorias** permitindo a listagem e edição de categorias, adição de novo e por fim pausa para não aparecer mais na loja.
+- **Gerenciamento de clientes** permitindo a listagem, visualização das informações e histórico de compras, além de desativar negando acesso a loja.
+- **Gerenciamento de administradores** permitindo a listagem e edição de usuários, adição de novo e por fim desativar negando acesso a loja.
+- **Relatórios** das últimas transações realizadas na loja, além de histórico de vendas por produto.
+
+**Todas as páginas e rotas de API estão validando a autorização do usuário para acesso.**
+
+## Tecnologias
+
+Para o **backend**, desenvolvemos uma API REST utilizando **NodeJS** e o **framework Express**. Para armazenar os dados foi escolhido o banco de dados **MongoDB** e para conexão a **biblioteca mongoose**.
+
+Para trabalhar a autenticação de usuários usamos a **biblioteca jsonwebtoken** e para o upload das imagens dos produtos a **biblioteca multer**.
+
+No frontend, desenvolvemos uma aplicação usando **ReactJS** e duas bibliotecas específicas: **Styled Components** para auxiliar na estilização e **React Router** para a criação das páginas.
+
+As informações do carrinho e se o usuário está logado são armazenados em **LocalStorage**, dessa forma, se o usuário retornar a aplicação, essas informações serão persistidas.
+
+## Organização
+
+Na pasta `api`está o projeto do backend, tendo a seguinte organização:
+
+- `/configs`contém as informações de configuração do multer para upload de imagens
+- `/lib` contém as funções responsáveis para verificar se o usuário tem permissão para acessar as rotas
+- `/models` contém as definições de cada tabela do banco de dados
+- `/routes` contém as funções para cuidar de cada rota da API
+- `/uploads` contém as imagens que foram realizadas upload
+- `.env`contém informações de conexão com o banco de dados
+- `app.js` é o arquivo principal da API que conecta com o banco de dados e define todas as rotas
+
+Na pasta `ui`está o projeto do frontend, tendo a seguinte organização:
+
+- `/public`fica o arquivo final HTML da aplicação
+- `/src` contém todos os arquivos principais da aplicação
+- `/src/components` contém os componentes utilizados pelas páginas
+- `/src/images` contém as imagens estáticas
+- `/src/pages` contém as páginas da aplicação
+- `/src/styles` contém os estilos reusáveis
+- `/src/App.js` contém a definição das rotas
+- `/src/index.js` arquivo principal do ReactJs
+- `/src/store.js` contém o código responsável por armazenar informações que podem ser compartilhadas entre as páginas, como se o usuário está logado ou itens do carrinho
+
+Na pasta `static` contém os arquivos puros HTML, CSS e JS das etapas anteriores.
+
+Na parta `dump` contém uma cópia do banco de dados.
 
 ## Problemas
+
 As maiores dificuldades que tivemos durante a implementação, foi na construção da formatação/estilo das páginas.
 Tivemos que consultar bastante o GitHub e Youtube para encontrarmos referencias em CSS que poderíamos utilizar/adaptar para o nosso projeto.
 
-## Comentários
+## Comentários Gerais
+
 Durante o projeto, um dos integrantes do grupo trancou a disciplina, e isso acabou sobrecarregando o restante da equipe.
