@@ -137,6 +137,8 @@ Nos testes finais, o resultado foi satisfatório.
 As maiores dificuldades que tivemos durante a implementação, foi na construção da formatação/estilo das páginas, e conexão com a API.
 Tivemos que consultar bastante o GitHub e Youtube para encontrarmos outras referencias que poderíamos utilizar/adaptar para o nosso projeto.
 
+Até a última entrega, tínhamos a ideia de colocar a funcionalidade de cálculo de Frete no nosso site, mas após algumas pesquisas percebemos que a integração com o site dos correios é paga, e por isso desistimos da ideia. Como alternativa, deixamos o campo de cálculo de frete, porém o resultado sempre será "Frete Grátis".
+
 ## Comentários Gerais
 
 Durante o projeto, um dos integrantes do grupo trancou a disciplina, e isso acabou sobrecarregando o restante da equipe.
