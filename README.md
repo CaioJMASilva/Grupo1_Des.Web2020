@@ -35,6 +35,7 @@ Para o usuário administrador:
 - **Gerenciamento de administradores** permitindo a listagem e edição de usuários, adição de novo e por fim desativar negando acesso a loja.
 - **Relatórios** das últimas transações realizadas na loja, além de histórico de vendas por produto.
 
+**Para logar como administrador, utilize as credenciais: Login: admin  -  Senha: 123**
 **Todas as páginas e rotas de API estão validando a autorização do usuário para acesso.**
 
 ## Comentários sobre o código
@@ -87,7 +88,16 @@ Na parta `dump` contém uma cópia do banco de dados.
 
 ## Plano de Teste
 
-Não utilizamos nenhuma ferramenta atomatizada para realizar testes. Nossos testes foram manuais através da execução dos arquivos html utilizando o Google Chrome.
+Não utilizamos nenhuma ferramenta atomatizada para realizar testes. Nossos testes foram manuais utilizando o Google Chrome.
+
+###Teste 1 
+Na Home, selecionei o primeiro produto -> Na página do produto, cliquei em comprar -> Na primeira página do carrinho, fui para a página de lançamentos -> Na página de Lançamentos, selecionei o primeiro produto ->  Na página do produto, cliquei em comprar -> Na primeira página do carrinho, adicionei e depois removi 1 produto igual ao último adicionado -> Na página de carrinho, cliquei em continuar -> Na página Login, cliquei em criar sua conta -> Após criar a conta, voltei para o carrinho ->  Na página de carrinho, cliquei em continuar -> Na página de endereço, cliquei em continuar -> Na página de pagamento, adicionei informações de pagamento e cliquei em finalizar compra.
+
+###Teste 2
+Na Home, selecionei o ícone de login -> Na página de login, inseri as credencias que criei no teste anterior -> Na página do usuário, verifiquei o histórico de compras.
+
+###Teste 3
+Na página de admin, coloquei as credenciais -> Cliquei na botão Relatórios, e verifiquei o relatório de Vendas -> Cliquei no botão Usuários, e verifiquei as informações dos clientes.
 
 ## Resultados de teste
 
@@ -130,6 +140,8 @@ Nos testes finais, o resultado foi satisfatório.
 `yarn start` ou `npm start`
 
 - **Passo 8:** Na url `http://localhost:3000` estará o ecommerce rodando
+
+- **Passo 9:** Na url `http://localhost:3000/admin` estará a página de administrador. (Login: admin  -  Senha: 123)
 
 
 ## Problemas
