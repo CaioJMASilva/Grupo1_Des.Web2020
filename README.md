@@ -91,13 +91,13 @@ Na parta `dump` contém uma cópia do banco de dados.
 
 Não utilizamos nenhuma ferramenta atomatizada para realizar testes. Nossos testes foram manuais utilizando o Google Chrome.
 
-###Teste 1 
+### Teste 1 
 Na Home, selecionei o primeiro produto -> Na página do produto, cliquei em comprar -> Na primeira página do carrinho, fui para a página de lançamentos -> Na página de Lançamentos, selecionei o primeiro produto ->  Na página do produto, cliquei em comprar -> Na primeira página do carrinho, adicionei e depois removi 1 produto igual ao último adicionado -> Na página de carrinho, cliquei em continuar -> Na página Login, cliquei em criar sua conta -> Após criar a conta, voltei para o carrinho ->  Na página de carrinho, cliquei em continuar -> Na página de endereço, cliquei em continuar -> Na página de pagamento, adicionei informações de pagamento e cliquei em finalizar compra.
 
-###Teste 2
+### Teste 2
 Na Home, selecionei o ícone de login -> Na página de login, inseri as credencias que criei no teste anterior -> Na página do usuário, verifiquei o histórico de compras.
 
-###Teste 3
+### Teste 3
 Na página de admin, coloquei as credenciais -> Cliquei na botão Relatórios, e verifiquei o relatório de Vendas -> Cliquei no botão Usuários, e verifiquei as informações dos clientes.
 
 ## Resultados de teste
