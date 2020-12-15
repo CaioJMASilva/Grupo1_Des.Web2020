@@ -35,7 +35,7 @@ Para o usuário administrador:
 - **Gerenciamento de administradores** permitindo a listagem e edição de usuários, adição de novo e por fim desativar negando acesso a loja.
 - **Relatórios** das últimas transações realizadas na loja, além de histórico de vendas por produto.
 
-**Para logar como administrador, utilize as credenciais: Login: admin  -  Senha: 123**
+**Para logar como administrador adicione /admin ao final do endereço da página, e utilize as credenciais: Login: admin  -  Senha: 123**
 
 **Todas as páginas e rotas de API estão validando a autorização do usuário para acesso.**
 
