@@ -6,7 +6,7 @@ Projeto de desenvolvimento Web
 ## Descrição do Projeto
 
 Nesse projeto desenvolvemos uma loja de jogos para computador, chamada "Bee Games".<br>
-Na nossa loja os jogos estão organizados por categoria, além da página inicial, que mostra os jogos lançados mais recentemente.<br>
+Na nossa loja os jogos estão organizados por categorias, como por exemplo, Lançamentos, Ação e Aventura.<br>
 A nossa funcionalidade extra, será a visualização de um vídeo de gameplay do jogo, que poderá ser acessado pelo usuário dentro da página de produto.<br>
 Utilizamos o "Marvelapp" para desenhar os mockups do nosso site, que vocês poderão acessar através do link a seguir:<br>
 [Mockups do Projeto](https://marvelapp.com/prototype/25i5e036/screen/73256281)
