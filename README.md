@@ -152,6 +152,8 @@ Tivemos que consultar bastante o GitHub e Youtube para encontrarmos outras refer
 
 Até a última entrega, tínhamos a ideia de colocar a funcionalidade de cálculo de Frete no nosso site, mas após algumas pesquisas percebemos que a integração com o site dos correios é paga, e por isso desistimos da ideia. Como alternativa, deixamos o campo de cálculo de frete, porém o resultado sempre será "Frete Grátis".
 
+Para fazer a apresentação, tivemos que rodar o site em um outro computador que usava windows, e tivemos algumas dificuldades para instalar algumas dependencias e integrar a API com o MongoDB. Não conseguimos através do prompt, e tivemos que fazer de uma forma "manual" usando o MongoDBCompass
+
 ## Comentários Gerais
 
 Durante o projeto, um dos integrantes do grupo trancou a disciplina, e isso acabou sobrecarregando o restante da equipe.
